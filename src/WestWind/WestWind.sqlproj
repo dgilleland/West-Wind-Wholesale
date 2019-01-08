@@ -115,4 +115,7 @@
   <ItemGroup>
     <None Include="WestWind.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeployment-Data.sql" />
+  </ItemGroup>
 </Project>
