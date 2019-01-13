@@ -113,9 +113,9 @@
     <Build Include="dbo\Tables\ManifestItems.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="WestWind.publish.xml" />
+    <PostDeploy Include="PostDeployment-Data.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="PostDeployment-Data.sql" />
+    <None Include="WestWind.publish.xml" />
   </ItemGroup>
 </Project>

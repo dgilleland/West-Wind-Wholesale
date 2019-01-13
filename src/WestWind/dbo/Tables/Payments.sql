@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Payments] (
     [PaymentID]     INT            IDENTITY (10000, 1) NOT NULL,
     [PaymentDate]   DATETIME       CONSTRAINT [DF_PAY_PDate_Today] DEFAULT (getdate()) NOT NULL,
-    [Amount]        DECIMAL (6, 2) CONSTRAINT [DF_PAY_PayAmt_0] DEFAULT ((0)) NOT NULL,
+    [Amount]        SMALLMONEY CONSTRAINT [DF_PAY_PayAmt_0] DEFAULT ((0)) NOT NULL,
     [PaymentTypeID] TINYINT        NOT NULL,
     [OrderID]     INT            NOT NULL,
     CONSTRAINT [PK_PAY_PayID] PRIMARY KEY CLUSTERED ([PaymentID] ASC),
