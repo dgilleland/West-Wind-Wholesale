@@ -6668,3 +6668,8 @@ INSERT [dbo].[Shippers] ([ShipperID], [CompanyName], [Phone]) VALUES (3, N'Feder
 GO
 SET IDENTITY_INSERT [dbo].[Shippers] OFF
 GO
+UPDATE [Orders]
+SET    [Freight] = 15.00
+WHERE  [Freight] < 15.00
+  AND  [OrderID] IN (SELECT [OrderID] FROM [OrderDetails] GROUP BY [OrderID] HAVING SUM([Quantity] * [UnitPrice]) > 22.5)
+GO
