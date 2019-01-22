@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Orders] (
     [OrderID]        INT           IDENTITY (1, 1) NOT NULL,
     [SalesRepID]     INT           NULL,
-    [CustomerID]     NCHAR (5)     NULL,
+    [CustomerID]     NCHAR (5)     NOT NULL,
     [OrderDate]      DATETIME      NULL,
     [RequiredDate]   DATETIME      NULL,
     [Freight]        MONEY         CONSTRAINT [DF_Orders_Freight] DEFAULT ((0)) NULL,
@@ -11,6 +11,7 @@
     [ShipRegion]     NVARCHAR (15) NULL,
     [ShipPostalCode] NVARCHAR (10) NULL,
     [ShipCountry]    NVARCHAR (15) NULL,
+    [Comments] NVARCHAR(250) NULL, 
     CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED ([OrderID] ASC),
     CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [dbo].[Customers] ([CustomerID]),
     CONSTRAINT [FK_Orders_Employees] FOREIGN KEY ([SalesRepID]) REFERENCES [dbo].[Employees] ([EmployeeID])
