@@ -6673,3 +6673,37 @@ SET    [Freight] = 15.00
 WHERE  [Freight] < 15.00
   AND  [OrderID] IN (SELECT [OrderID] FROM [OrderDetails] GROUP BY [OrderID] HAVING SUM([Quantity] * [UnitPrice]) > 22.5)
 GO
+-- Randomize Order.SalesRepID values
+;WITH CTE AS 
+(
+    SELECT
+         t.OrderID 
+        ,t.SalesRepID 
+        ,g.Employeeid AS Employeeid
+    FROM
+    (
+        SELECT 
+             OrderID
+            ,SalesRepID 
+            ,
+            (
+                (ROW_NUMBER() OVER (ORDER BY NEWID() ) -1) 
+                % 
+                (SELECT COUNT(*) FROM Employees WHERE   JobTitle = 'Sales Representative') 
+            ) + 1 AS rn -- number FROM 1 to n 
+        FROM Orders
+    ) AS t 
+
+    INNER JOIN 
+    ( 
+        SELECT 
+             Employeeid 
+            ,ROW_NUMBER() OVER (ORDER BY NEWID() ) AS rn -- sequential number FROM 1 to n 
+        FROM Employees
+        WHERE   JobTitle = 'Sales Representative'
+    ) AS g 
+        ON t.rn = g.rn 
+)
+-- SELECT * FROM CTE 
+UPDATE CTE SET SalesRepID = Employeeid 
+GO
