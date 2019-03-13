@@ -4,6 +4,7 @@
     [CustomerID]     NCHAR (5)     NOT NULL,
     [OrderDate]      DATETIME      NULL,
     [RequiredDate]   DATETIME      NULL,
+    [PaymentDueDate] DATETIME      NULL,
     [Freight]        MONEY         CONSTRAINT [DF_Orders_Freight] DEFAULT ((0)) NULL,
     [ShipName]       NVARCHAR (40) NULL,
     [ShipAddress]    NVARCHAR (60) NULL,

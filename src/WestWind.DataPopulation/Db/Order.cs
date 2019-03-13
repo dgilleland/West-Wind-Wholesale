@@ -27,6 +27,8 @@ namespace WestWind.DataPopulation.Db
 
         public DateTime? RequiredDate { get; set; }
 
+        public DateTime? PaymentDueDate { get; set; }
+
         [Column(TypeName = "money")]
         public decimal? Freight { get; set; }
 

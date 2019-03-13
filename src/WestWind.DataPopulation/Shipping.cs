@@ -5,6 +5,13 @@ using WestWind.DataPopulation.Db;
 
 namespace WestWind.DataPopulation
 {
+    public class Invoicing
+    {
+        public static void PayInvoices()
+        {
+
+        }
+    }
     public class Shipping
     {
         public static void ShipOrders()
@@ -25,6 +32,7 @@ namespace WestWind.DataPopulation
                             var freight = System.Math.Round(charged * shipment.QuantityCount * 1.0m / order.QuantityCount, 2);
                             shipment.SetFreight(freight);
                             var shipDate = order.OrderedOn.Value.AddDays(Rnd.Next((order.RequiredBy - order.OrderedOn).Value.Days - 7));
+                            if (shipDate.DayOfWeek == DayOfWeek.Sunday) shipDate.AddDays(-1);
                             int shipvia = ids[Rnd.Next(ids.Count())];
                             ShipToCustomer(shipment, order.OrderID, shipDate, shipvia);
                         }
