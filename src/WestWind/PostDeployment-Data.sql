@@ -6707,3 +6707,10 @@ GO
 -- SELECT * FROM CTE 
 UPDATE CTE SET SalesRepID = Employeeid 
 GO
+
+-- PaymentTypes
+INSERT INTO PaymentTypes(PaymentTypeDescription)
+VALUES('BankTransfer'),
+      ('Cheque'),
+      ('Certified Cheque'),
+      ('Credit Card')

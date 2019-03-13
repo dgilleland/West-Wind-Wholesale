@@ -4,6 +4,8 @@
     [Amount]        SMALLMONEY CONSTRAINT [DF_PAY_PayAmt_0] DEFAULT ((0)) NOT NULL,
     [PaymentTypeID] TINYINT        NOT NULL,
     [OrderID]     INT            NOT NULL,
+    [TransactionID] UNIQUEIDENTIFIER NOT NULL, 
+    [ClearedDate] DATETIME NULL, 
     CONSTRAINT [PK_PAY_PayID] PRIMARY KEY CLUSTERED ([PaymentID] ASC),
     CONSTRAINT [CK_PAY_PayAmt_GE0] CHECK ([Amount]>=(0)),
     CONSTRAINT [CK_PAY_PDate_Not_Old] CHECK ([PaymentDate]>=getdate()),
