@@ -14,7 +14,7 @@ namespace WestWind.DataPopulation.Db
             ManifestItems = new HashSet<ManifestItem>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ShipmentID { get; set; }
 
         public int OrderID { get; set; }

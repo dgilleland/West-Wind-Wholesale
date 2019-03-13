@@ -7,6 +7,7 @@ namespace WestWind.DataPopulation
     {
         static void Main(string[] args)
         {
+            Shipping.ShipOrders();
         }
     }
 }

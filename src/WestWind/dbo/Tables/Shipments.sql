@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Shipments]
 (
-    [ShipmentID] INT NOT NULL PRIMARY KEY, 
+    [ShipmentID] INT NOT NULL PRIMARY KEY IDENTITY, 
     [OrderID] INT NOT NULL, 
     [ShippedDate] DATETIME NOT NULL, 
     [ShipVia] INT NOT NULL, 
