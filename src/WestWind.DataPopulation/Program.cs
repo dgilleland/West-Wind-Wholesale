@@ -7,7 +7,9 @@ namespace WestWind.DataPopulation
     {
         static void Main(string[] args)
         {
+            DateShifting.CorrectForWeekdays();
             Shipping.ShipOrders();
+            Invoicing.PayInvoices();
         }
     }
 }

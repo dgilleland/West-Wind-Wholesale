@@ -6,6 +6,7 @@
     [RequiredDate]   DATETIME      NULL,
     [PaymentDueDate] DATETIME      NULL,
     [Freight]        MONEY         CONSTRAINT [DF_Orders_Freight] DEFAULT ((0)) NULL,
+    [Shipped]        BIT           NOT NULL DEFAULT (0), 
     [ShipName]       NVARCHAR (40) NULL,
     [ShipAddress]    NVARCHAR (60) NULL,
     [ShipCity]       NVARCHAR (15) NULL,

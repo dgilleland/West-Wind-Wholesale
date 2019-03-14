@@ -12,12 +12,16 @@ namespace WestWind.DataPopulation.Db
 
         public DateTime PaymentDate { get; set; }
 
+        public DateTime? ClearedDate { get; set; }
+
         [Column(TypeName = "smallmoney")]
         public decimal Amount { get; set; }
 
         public byte PaymentTypeID { get; set; }
 
         public int OrderID { get; set; }
+
+        public Guid TransactionID { get; set; }
 
         public virtual Order Order { get; set; }
 

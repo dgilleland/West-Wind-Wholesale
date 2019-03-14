@@ -32,6 +32,8 @@ namespace WestWind.DataPopulation.Db
         [Column(TypeName = "money")]
         public decimal? Freight { get; set; }
 
+        public bool Shipped { get; set; }
+
         [StringLength(40)]
         public string ShipName { get; set; }
 

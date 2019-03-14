@@ -66,6 +66,7 @@
     <Compile Include="Db\Shipper.cs" />
     <Compile Include="Db\Supplier.cs" />
     <Compile Include="Db\Territory.cs" />
+    <Compile Include="Db\Views\OrderSubtotal.cs" />
     <Compile Include="Db\WestWindContext.cs" />
     <Compile Include="OrderShipment.cs" />
     <Compile Include="Program.cs" />
