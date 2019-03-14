@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateShifting.cs" />
     <Compile Include="Db\Category.cs" />
     <Compile Include="Db\Customer.cs" />
     <Compile Include="Db\Employee.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Db\Territory.cs" />
     <Compile Include="Db\Views\OrderSubtotal.cs" />
     <Compile Include="Db\WestWindContext.cs" />
+    <Compile Include="Invoicing.cs" />
     <Compile Include="OrderShipment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
