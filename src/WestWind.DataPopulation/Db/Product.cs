@@ -29,6 +29,8 @@ namespace WestWind.DataPopulation.Db
         [StringLength(20)]
         public string QuantityPerUnit { get; set; }
 
+        public short? MinimumOrderQuantity { get; set; }
+
         [Column(TypeName = "money")]
         public decimal UnitPrice { get; set; }
 
