@@ -111,6 +111,7 @@
     </Build>
     <Build Include="dbo\Tables\Shipments.sql" />
     <Build Include="dbo\Tables\ManifestItems.sql" />
+    <Build Include="dbo\Tables\BuildVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeployment-Data.sql" />

@@ -3,6 +3,7 @@
     [CompanyName]   NVARCHAR (40)  NOT NULL,
     [ContactName]   NVARCHAR (30)  NOT NULL,
     [ContactTitle]  NVARCHAR (30)  NULL,
+    [Email]         NVARCHAR (50)  NOT NULL,
     [Address]       NVARCHAR (60)  NOT NULL,
     [City]          NVARCHAR (15)  NOT NULL,
     [Region]        NVARCHAR (15)  NULL,

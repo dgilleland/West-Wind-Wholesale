@@ -4,6 +4,7 @@
     [SupplierID]      INT           NOT NULL,
     [CategoryID]      INT           NOT NULL,
     [QuantityPerUnit] NVARCHAR (20) NOT NULL,
+    [MinimumOrderQuantity] SMALLINT     NULL, 
     [UnitPrice]       MONEY         CONSTRAINT [DF_Products_UnitPrice] DEFAULT ((0)) NOT NULL,
     [UnitsOnOrder]    INT      CONSTRAINT [DF_Products_UnitsOnOrder] DEFAULT ((0)) NOT NULL,
     [Discontinued]    BIT           CONSTRAINT [DF_Products_Discontinued] DEFAULT ((0)) NOT NULL,
