@@ -9,6 +9,7 @@ SELECT
 	[SupplierID],
 	[CategoryID],
 	[QuantityPerUnit],
+    [MinimumOrderQuantity],
 	[UnitPrice],
 	[UnitsOnOrder],
 	[Discontinued]

@@ -10,6 +10,7 @@ IF @SupplierID IS NULL
 			[SupplierID],
 			[CategoryID],
 			[QuantityPerUnit],
+            [MinimumOrderQuantity],
 			[UnitPrice],
 			[UnitsOnOrder],
 			[Discontinued]
@@ -25,6 +26,7 @@ ELSE
 			[SupplierID],
 			[CategoryID],
 			[QuantityPerUnit],
+            [MinimumOrderQuantity],
 			[UnitPrice],
 			[UnitsOnOrder],
 			[Discontinued]

@@ -10,7 +10,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 INSERT INTO BuildVersion(Major, Minor, Build)
-    VALUES(1, 0, 1)
+    VALUES(1, 0, 2)
 GO
 SET IDENTITY_INSERT [dbo].[Categories] ON 
 GO
