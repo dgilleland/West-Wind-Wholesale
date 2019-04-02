@@ -9,6 +9,7 @@ SELECT
 	[CompanyName],
 	[ContactName],
 	[ContactTitle],
+	[ContactEmail],
 	[Address],
 	[City],
 	[Region],
