@@ -15,7 +15,8 @@ SELECT
 	[ShipCity],
 	[ShipRegion],
 	[ShipPostalCode],
-	[ShipCountry]
+	[ShipCountry],
+	[Comments]
 FROM Orders
 WHERE
 	[SalesRepID]=@EmployeeID
