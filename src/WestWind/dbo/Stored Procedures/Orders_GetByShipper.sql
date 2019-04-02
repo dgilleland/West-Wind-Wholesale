@@ -15,7 +15,8 @@ SELECT
 	[ShipCity],
 	[ShipRegion],
 	[ShipPostalCode],
-	[ShipCountry]
+	[ShipCountry],
+	[Comments]
 FROM Orders O
 INNER JOIN Shipments S ON O.OrderID = S.OrderID
 WHERE
