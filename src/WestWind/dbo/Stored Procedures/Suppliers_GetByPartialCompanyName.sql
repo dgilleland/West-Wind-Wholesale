@@ -10,11 +10,7 @@ SELECT
 	[ContactName],
 	[ContactTitle],
     [Email],
-	[Address],
-	[City],
-	[Region],
-	[PostalCode],
-	[Country],
+	[AddressID],
 	[Phone],
 	[Fax]
 FROM Suppliers

@@ -1,23 +1,22 @@
 ﻿CREATE TABLE [dbo].[Orders] (
-    [OrderID]        INT           IDENTITY (1, 1) NOT NULL,
-    [SalesRepID]     INT           NULL,
-    [CustomerID]     NCHAR (5)     NOT NULL,
-    [OrderDate]      DATETIME      NULL,
-    [RequiredDate]   DATETIME      NULL,
-    [PaymentDueDate] DATETIME      NULL,
-    [Freight]        MONEY         CONSTRAINT [DF_Orders_Freight] DEFAULT ((0)) NULL,
-    [Shipped]        BIT           NOT NULL DEFAULT (0), 
-    [ShipName]       NVARCHAR (40) NULL,
-    [ShipAddress]    NVARCHAR (60) NULL,
-    [ShipCity]       NVARCHAR (15) NULL,
-    [ShipRegion]     NVARCHAR (15) NULL,
-    [ShipPostalCode] NVARCHAR (10) NULL,
-    [ShipCountry]    NVARCHAR (15) NULL,
-    [Comments] NVARCHAR(250) NULL, 
+    [OrderID]        INT            IDENTITY (1, 1) NOT NULL,
+    [SalesRepID]     INT            NULL,
+    [CustomerID]     NCHAR (5)      NOT NULL,
+    [OrderDate]      DATETIME       NULL,
+    [RequiredDate]   DATETIME       NULL,
+    [PaymentDueDate] DATETIME       NULL,
+    [Freight]        MONEY          CONSTRAINT [DF_Orders_Freight] DEFAULT ((0)) NULL,
+    [Shipped]        BIT            CONSTRAINT [DF__Orders__Shipped__5AEE82B9] DEFAULT ((0)) NOT NULL,
+    [ShipName]       NVARCHAR (40)  NULL,
+    [ShipAddressID]  INT            NULL,
+    [Comments]       NVARCHAR (250) NULL,
     CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED ([OrderID] ASC),
+    CONSTRAINT [FK_Orders_Addresses] FOREIGN KEY ([ShipAddressID]) REFERENCES [dbo].[Addresses] ([AddressID]),
     CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [dbo].[Customers] ([CustomerID]),
     CONSTRAINT [FK_Orders_Employees] FOREIGN KEY ([SalesRepID]) REFERENCES [dbo].[Employees] ([EmployeeID])
 );
+
+
 
 
 GO
@@ -48,6 +47,5 @@ CREATE NONCLUSTERED INDEX [OrderDate]
 GO
 
 
-CREATE NONCLUSTERED INDEX [ShipPostalCode]
-    ON [dbo].[Orders]([ShipPostalCode] ASC);
+
 

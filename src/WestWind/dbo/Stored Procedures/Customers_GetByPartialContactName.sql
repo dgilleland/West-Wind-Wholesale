@@ -11,11 +11,7 @@ IF @PartialName IS NULL
 			[ContactName],
 			[ContactTitle],
 			[ContactEmail],
-			[Address],
-			[City],
-			[Region],
-			[PostalCode],
-			[Country],
+			[AddressID],
 			[Phone],
 			[Fax]
 		FROM Customers
@@ -30,11 +26,7 @@ ELSE
 			[ContactName],
 			[ContactTitle],
 			[ContactEmail],
-			[Address],
-			[City],
-			[Region],
-			[PostalCode],
-			[Country],
+			[AddressID],
 			[Phone],
 			[Fax]
 		FROM Customers

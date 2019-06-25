@@ -11,11 +11,7 @@ SELECT
 	[RequiredDate],
 	[Freight],
 	[ShipName],
-	[ShipAddress],
-	[ShipCity],
-	[ShipRegion],
-	[ShipPostalCode],
-	[ShipCountry],
+	[ShipAddressID],
 	[Comments]
 FROM Orders
 WHERE
