@@ -6,7 +6,6 @@ To regenerate the database from the source files and generate random shipment/pa
 
 1. Open the Visual Studio solution in the `\src` folder.
 1. Publish the database using `WestWind.publish.xml`.
-1. Run the solution ([ctrl] + [F5]).
 
 ![Publish](./src/PublishWestWind.png)
 ![Run](./src/Ctrl+F5.png)
