@@ -2,7 +2,7 @@
 
 The database design for ***West-Wind Wholesale*** is represented in the following ERD.
 
-![West-Wind ERD](./Diagrams-WestWindERD.png)
+![West-Wind ERD](./Diagrams-WestWindERD.svg)
 
 ## Maintaining the Product Catalog
 
