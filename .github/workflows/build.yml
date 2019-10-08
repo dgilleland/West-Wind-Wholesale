@@ -9,5 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: see if msbuild is installed
-      run: MSBuild.exe
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Build database project
+      working-directory: src
+      run: MSBuild.exe WestWind/WestWind.sqlproj
