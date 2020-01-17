@@ -1,9 +1,9 @@
 name: Create Release
 
-on: [push]
-#  push:
-#    tags:
-#      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+on:
+  push:
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
   build:
@@ -30,7 +30,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        release_name: West Wind Database ${{ github.ref }}
+        body: |
+          A refactoring of the Northwind Traders database, **West Wind Wholesalers** is a retail distributor based on a drop-shipping model.
         draft: true
         prerelease: true
     - name: Upload Release Asset
