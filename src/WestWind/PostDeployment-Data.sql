@@ -10,7 +10,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 INSERT INTO BuildVersion(Major, Minor, Build)
-    VALUES(2, 0, 0)
+    VALUES(2, 0, 1)
 GO
 
 ALTER TABLE [dbo].[Payments] NOCHECK CONSTRAINT [CK_PAY_PDate_Not_Old]

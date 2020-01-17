@@ -8,7 +8,8 @@
     [Phone]        NVARCHAR (24) NOT NULL,
     [Fax]          NVARCHAR (24) NULL,
     CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED ([CustomerID] ASC),
-    CONSTRAINT [FK_Customers_Addresses] FOREIGN KEY ([AddressID]) REFERENCES [dbo].[Addresses] ([AddressID])
+    CONSTRAINT [FK_Customers_Addresses] FOREIGN KEY ([AddressID]) REFERENCES [dbo].[Addresses] ([AddressID]),
+    CONSTRAINT [UX_Customers_AddressID] UNIQUE ([AddressID])
 );
 
 
