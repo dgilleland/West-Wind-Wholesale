@@ -2,7 +2,7 @@
 
 > Derived from the original *Northwind Traders*, this demo database maintains much of the original but includes additions/changes that allow the business to be imagined as a drop-shipping wholesaler. Also, dates have been bumped up by 20 years, to make it look a bit more "modern".
 
-![ERD](./Design/Diagrams-WestWindERD.svg)
+![ERD](./Design/Diagrams-WestWindERD.png)
 
 ----
 
@@ -13,5 +13,8 @@ To regenerate the database from the source files and generate random shipment/pa
 1. Open the Visual Studio solution in the `\src` folder.
 1. Publish the database using `WestWind.publish.xml`.
 
-![Publish](./src/PublishWestWind.png)
-![Run](./src/Ctrl+F5.png)
+    ![Publish](./src/PublishWestWind.png)
+
+1. Run the program to regenerate additional records
+
+    ![Run](./src/Ctrl+F5.png)
